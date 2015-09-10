@@ -1,0 +1,9 @@
+{
+    "name": "compiler",
+	"description": "A mustache-like template compiler for D",
+    "targetType": "executable",
+	"targetName": "jax",
+	"dependencies": {
+		"jax:filters": "*"
+	}
+}

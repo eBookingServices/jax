@@ -1,0 +1,18 @@
+{{#def content}}
+	<h1>Example</h1>
+	{{? td.iterable.length}}
+		<ol>
+			{{* key, value; td.iterable}}
+				<li>{{ key }} =&gt; {{ value }}</li>
+			{{/}}
+		</ol>
+	{{:}}
+		{{~ "empty" }}
+	{{/}}
+	<div>
+	{{~ "footer" }}
+	</div>
+{{#/}}
+
+{{& layout}}
+{{# layout(content)}}

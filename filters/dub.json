@@ -1,0 +1,5 @@
+{
+    "name": "filters",
+	"description": "Default run-time filters implemenation for Jax",
+    "targetType": "library",
+}

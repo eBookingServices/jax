@@ -1,0 +1,11 @@
+{
+    "name": "example",
+	"description": "Jax template compiler example",
+    "stringImportPaths": [ "views/mixin" ],
+    "targetType": "executable",
+	"versions": ["VibeDefaultMain"],
+	"dependencies": {
+		"vibe-d": ">=0.7.24",
+		"jax:filters": "*"
+	}
+}
