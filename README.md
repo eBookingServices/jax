@@ -1,10 +1,10 @@
-# jax
-Mustache-like template compiler for D
+### Jax - Mustache-like template compiler for D
 
 Jax has been written mainly for use with vibe.d but it can be used in any other way.
 
 Compiles source text/html into valid D source code ready for use as a mixin.
-Features:
+
+### Features
 - HTML compressor
 - Parametrized macros
 - Good and detailed error reporting
@@ -14,7 +14,7 @@ Features:
 - Interpolation and translation tags will escape HTML by default
 
 
-Options:
+#### Options
 	o|output-dir - Output directory
 	p|time - Display elapsed time at end
 	v|verbose - Verbose output
@@ -26,7 +26,7 @@ Options:
 	t|token	- Token for token_url interpolation filter. Useful for cache-busting
 	
 
-Tags:
+#### Tags
 	{{& fileName}} - Include external file
 	{{&& fileName}} - Embed external file as mime-encoded content
 	{{* it; iterable}}{{/}} - Iterate object, array or otherwise iteratable symbol - implemeted as foreach in D
@@ -38,7 +38,7 @@ Tags:
 	{{# def myMacro(arg)}} macro text {{# arg}} {{#/}}
 	{{# macroMacro("mooo")}} - Call a macro
 	
-Filters:
+#### Filters
 	none - Does nothing
 	lower - Lower case
  	upper - Upper case
@@ -53,7 +53,7 @@ Filters:
 Check the example directory for a working example.
 
 
-TODO:
+#### TODO
 - add means to remove whitespace in-between template-tags
 - add more configuration options
 - improve HTML compressor
