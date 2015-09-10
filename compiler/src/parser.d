@@ -34,7 +34,7 @@ struct Parser {
 		//writeln(source);
 		auto parser = Parser(options);
 
-		source = parser.compileString(fileName, source);
+		source = parser.compileString(fileName, source)
 			.replace("`);write(`", "")  // collapse consecutive writes
 			.replace("\r\n", "\n");     // convert windows to unix line endings to save some bytes
 
