@@ -27,16 +27,16 @@ Compiles source text/html into valid D source code ready for use as a mixin.
 	
 
 #### Tags
-	{{& fileName}} - Include external file
-	{{&& fileName}} - Embed external file as mime-encoded content
-	{{* it; iterable}}{{/}} - Iterate object, array or otherwise iteratable symbol - implemeted as foreach in D
-	{{? condition}} true case {{: [condition] }} else case {{/}}
+	{{& fileName }} - Include external file
+	{{&& fileName }} - Embed external file as mime-encoded content
+	{{* key, value; iterable }} {{key}} {{value}} {{/}} - Iterate any iteratable symbol - implemented as D foreach
+	{{? condition }} true case {{: [condition] }} else case {{/}}
 	{{% D code }} - Evaluate D code
-	{{! comment}} - Comment
-	{{ symbol | filters }} - Interpolate symbol as to output
+	{{! comment }} - Comment
+	{{ expr [| filters] }} - Write expression to output
 	{{~ "message-id"(["name": "moo"]) | filters }} - Translate message-id with arguments
-	{{# def myMacro(arg)}} macro text {{# arg}} {{#/}}
-	{{# macroMacro("mooo")}} - Call a macro
+	{{# def myMacro(arg) }} macro text {{# arg}} {{#/}}
+	{{# myMacro("mooo") }} - Call a macro
 	
 #### Filters
 	none - Does nothing
@@ -54,7 +54,7 @@ Check the example directory for a working example.
 
 
 #### TODO
-- add means to remove whitespace in-between template-tags
-- add more configuration options
-- improve HTML compressor
-- profile and optimize
+- Add means to control whitespaces in-between template-tags
+- Add more configuration options
+- Improve HTML compressor
+- Profile and optimize
