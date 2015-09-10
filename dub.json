@@ -1,6 +1,7 @@
 {
 	"name": "jax",
 	"description": "A mustache-like template compiler for D",
+	"license": "MIT License",
 	"targetType": "none",
 	"subPackages": [ "compiler/", "filters/", "example/" ]
 }
